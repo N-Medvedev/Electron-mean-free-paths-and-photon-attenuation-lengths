@@ -1,0 +1,126 @@
+*************************************************************
+*************************************************************
+*   __    __  _______     __       __    _   _______        *
+*   \ \  / / |__   __|   /  \     |  \  | | |__   __|       *
+*    \ \/ /     | |     / /\ \    |   \ | |    | |  ____    *
+*     )  (      | |    / /__\ \   | |\ \| |    | | |__  )   *
+*    / /\ \     | |   / ______ \  | | \   |    | |   / /    *
+*   /_/  \_\    |_|  /_/      \_\ |_|  \__|    |_|   \ \    *
+*                                                  ___) )   *
+*                                                 /____/    *
+*                                                           *
+*************************************************************
+*      (Version compiled with OpenMP parallelization)       *
+*************************************************************
+*************************************************************
+*  XTANT: X-ray-induced Thermal And Nonthermal Transitions  
+* Current version of the code: XTANT-3 (version 26.04.2026)
+*************************************************************
+  A hybrid approach consisting of: 
+ (1) Monte Carlo 
+ (2) Boltzmann collision integrals 
+ (3) Transferable Tight Binding 
+ (4) Molecular Dynamics 
+ DOI: https://doi.org/10.5281/zenodo.8392569
+*************************************************************
+  Calculations performed for the following parameters:
+ Target material: AlP
+ Chemical formula interpreted as: 
+ 4.000000 of Al (element #13)
+ 4.000000 of P (element #15)
+ Initial electron temperature	     273.000 [K]
+ Initial atomic temperature	     273.000 [K]
+ Number of FEL-pulses included  1
+ Photon energy       25.595 [eV]
+ Corresponding to the wavelength       48.442 [nm]
+ Monochromatic pulse is used
+ Gaussian pulse is used with
+ Pulse duration        1.000 [fs]
+ Pulse maximum at        0.000 [fs]
+ Absorbed dose         2.00000 [eV/atom]
+*************************************************************
+  No probe-pulse is calculated
+*************************************************************
+  The model parameters used are:
+ Duration of modelling -1.00000 [fs]
+ Tight Binding parametrization schemes used are:
+ Hamiltonian:      Molteni
+ Repulsive part:   Molteni
+ Zero-order TB: non-self-consistent-charge calculations
+ No van der Waals potential was defined
+ No Coulomb potential was defined or unbalanced charge allowed
+ No additional short-range repulsion was defined for close interatomic distances
+ Super-cell size in unit-cells: 1x1x1
+ Maxwellian distribution of initial velocities is used
+ Number of atoms in the supercell: 8
+ Boundary condition along X-axis: periodic
+ Boundary condition along Y-axis: periodic
+ Boundary condition along Z-axis: periodic
+ Electron cross sections used are from: CDF:EPICS
+ Density of the material:      2.360 [g/cm^3]
+ The used atomic density (used in MC cross sections):    4.905E+22 [1/cm^3]
+ EADL database used: EADL2025.ALL
+ EPDL database used: EPDL2025.ALL
+*************************************************************
+  The following numerical parameters are used:
+ Number of iterations in the MC module: 10000
+ Elastic high-energy-electron scattering is included in MC via Motts cross section
+ Number of threads in OPENMP: 30
+ MD algorithm used: Martyna-Tuckerman (4th order)
+ Time step in MD simulations is set from file: dt_grid.txt
+ Output data are saved every:     1.000 [fs]
+ Constant volume simulation (NVE)
+*************************************************************
+  The schemes for electron populations used are:
+ Scheme used for low-energy electrons relaxation: 
+ Relaxation-time approximation for electron thermalization
+ with the total characteristic time 100.000000 [fs]
+ Band-resolved relaxation is applied with characteristic times:
+ VB: Valence band relaxation time: 10.000000 [fs]
+ CB: Conduction band relaxation time: 10.000000 [fs]
+ Scheme used for electron-ion (electron-phonon) coupling: 
+ Landau full probability
+ switched on at:    -1000.0 [fs]
+ with the acceptance window:     5.0 [eV]
+ degeneracy tolerance:  0.00100 [eV]
+ and scaling factor of: 4.00000 (default)
+ using equivalent Maxwellian atomic distribution
+ No quenching of atoms for resolidification
+ No electronic thermostat is used
+ No atomic thermostat is used
+ Electron energy cut-off, separating high-energy- from low-energy-electrons: 8.0 [eV]
+ But it maybe dynamically adjusted to the top of CB (nonequilibrium simulation)
+ No electron emission is allowed in the calculation
+*************************************************************
+  Optional output:
+ Electron and photon mean free paths
+ Atomic coordinates in XYZ-format
+ Nearest neighbors numbers within the radius of 2.50 [A]
+ Output saved in the directory: OUTPUT_AlP_MFP
+*************************************************************
+ Estimated plasmon energy: 16.45 [eV]
+ Atomic data used for AlP are:
+-------------------------------------------------------------
+Element #1 is Al contributing to the compound with 4.00
+Atomic number: 13, mass: 4.48039E-26 [kg]
+Number of valence electrons: 3.00 (band: 4.00/atom)
+Shell#	Designator	Ne	Ip [eV]	Ek [eV]	Auger [fs]	
+1	K-shell 	1	2.0	1564.0	2210.9	1.802E+00
+2	L1-shell 	3	2.0	121.0	312.4	4.737E-01
+3	L2-shell 	5	2.0	77.0	273.4	1.151E+02
+4	L3-shell 	6	4.0	77.0	272.7	1.152E+02
+5	Valence 	63	3.0	0.0	0.0	1.00000E+23
+-------------------------------------------------------------
+Element #2 is P contributing to the compound with 4.00
+Atomic number: 15, mass: 5.14331E-26 [kg]
+Number of valence electrons: 5.00 (band: 4.00/atom)
+Shell#	Designator	Ne	Ip [eV]	Ek [eV]	Auger [fs]	
+1	K-shell 	1	2.0	2148.0	2963.5	1.482E+00
+2	L1-shell 	3	2.0	191.0	454.6	3.242E-01
+3	L2-shell 	5	2.0	135.0	414.0	1.767E+01
+4	L3-shell 	6	4.0	134.0	409.5	1.760E+01
+*************************************************************
+Started  at 12:37:49 on 26/04/2026
+Finished at 12:38:37 on 26/04/2026
+Duration of execution of program: 47.486 sec
+*************************************************************

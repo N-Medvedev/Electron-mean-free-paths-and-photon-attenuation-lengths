@@ -1,0 +1,207 @@
+*************************************************************
+*************************************************************
+*   __    __  _______     __       __    _   _______        *
+*   \ \  / / |__   __|   /  \     |  \  | | |__   __|       *
+*    \ \/ /     | |     / /\ \    |   \ | |    | |  ____    *
+*     )  (      | |    / /__\ \   | |\ \| |    | | |__  )   *
+*    / /\ \     | |   / ______ \  | | \   |    | |   / /    *
+*   /_/  \_\    |_|  /_/      \_\ |_|  \__|    |_|   \ \    *
+*                                                  ___) )   *
+*                                                 /____/    *
+*                                                           *
+*************************************************************
+*      (Version compiled with OpenMP parallelization)       *
+*************************************************************
+*************************************************************
+*  XTANT: X-ray-induced Thermal And Nonthermal Transitions  
+* Current version of the code: XTANT-3 (version 26.04.2026)
+*************************************************************
+  A hybrid approach consisting of: 
+ (1) Monte Carlo 
+ (2) Boltzmann collision integrals 
+ (3) Transferable Tight Binding 
+ (4) Molecular Dynamics 
+ DOI: https://doi.org/10.5281/zenodo.8392569
+*************************************************************
+  Calculations performed for the following parameters:
+ Target material: HfNbTaTiZr
+ Chemical formula interpreted as: 
+ 0.000000 of Hf (element #72)
+ 1.000000 of Nb (element #41)
+ 1.000000 of Ta (element #73)
+ 1.000000 of Ti (element #22)
+ 1.000000 of Zr (element #40)
+ Initial electron temperature	     273.000 [K]
+ Initial atomic temperature	     273.000 [K]
+ Number of FEL-pulses included  1
+ Photon energy       25.902 [eV]
+ Corresponding to the wavelength       47.867 [nm]
+ Monochromatic pulse is used
+ Gaussian pulse is used with
+ Pulse duration        1.000 [fs]
+ Pulse maximum at        0.000 [fs]
+ Absorbed dose         2.00000 [eV/atom]
+*************************************************************
+  No probe-pulse is calculated
+*************************************************************
+  The model parameters used are:
+ Duration of modelling -1.00000 [fs]
+ Tight Binding parametrization schemes used are:
+ Hamiltonian:      DFTB
+ Repulsive part:   DFTB
+ With skf-parametrization: (PTBP)
+ With the basis set: sp3d5
+ Zero-order TB: non-self-consistent-charge calculations
+ No van der Waals potential was defined
+ No Coulomb potential was defined or unbalanced charge allowed
+ No additional short-range repulsion was defined for close interatomic distances
+ Super-cell size in unit-cells: 1x1x1
+ Maxwellian distribution of initial velocities is used
+ Number of atoms in the supercell: 4
+ Boundary condition along X-axis: periodic
+ Boundary condition along Y-axis: periodic
+ Boundary condition along Z-axis: periodic
+ Electron cross sections used are from: CDF:EPICS
+ Density of the material:      9.645 [g/cm^3]
+ The used atomic density (used in MC cross sections):    5.626E+22 [1/cm^3]
+ EADL database used: EADL2025.ALL
+ EPDL database used: EPDL2025.ALL
+*************************************************************
+  The following numerical parameters are used:
+ Number of iterations in the MC module: 10000
+ Elastic high-energy-electron scattering is included in MC via Motts cross section
+ Number of threads in OPENMP: 30
+ MD algorithm used: Martyna-Tuckerman (4th order)
+ Time step in MD simulations is set from file: dt_grid.txt
+ Output data are saved every:     1.000 [fs]
+ Constant volume simulation (NVE)
+*************************************************************
+  The schemes for electron populations used are:
+ Scheme used for low-energy electrons relaxation: 
+ Relaxation-time approximation for electron thermalization
+ with the total characteristic time 100.000000 [fs]
+ Band-resolved relaxation is applied with characteristic times:
+ VB: Valence band relaxation time: 10.000000 [fs]
+ CB: Conduction band relaxation time: 10.000000 [fs]
+ Scheme used for electron-ion (electron-phonon) coupling: 
+ Landau full probability
+ switched on at:    -1000.0 [fs]
+ with the acceptance window:     5.0 [eV]
+ degeneracy tolerance:  0.00100 [eV]
+ and scaling factor of: 4.00000 (default)
+ using equivalent Maxwellian atomic distribution
+ No quenching of atoms for resolidification
+ No electronic thermostat is used
+ No atomic thermostat is used
+ Electron energy cut-off, separating high-energy- from low-energy-electrons: 8.0 [eV]
+ But it maybe dynamically adjusted to the top of CB (nonequilibrium simulation)
+ No electron emission is allowed in the calculation
+*************************************************************
+  Optional output:
+ Electron and photon mean free paths
+ Atomic coordinates in XYZ-format
+ Nearest neighbors numbers within the radius of 2.50 [A]
+ Output saved in the directory: OUTPUT_HfNbTaTiZr_MFP
+*************************************************************
+ Estimated plasmon energy: 18.68 [eV]
+ Atomic data used for HfNbTaTiZr are:
+-------------------------------------------------------------
+Element #1 is Hf contributing to the compound with 0.00
+Atomic number: 72, mass: 2.96390E-25 [kg]
+Number of valence electrons: 4.00 (band: 4.50/atom)
+Shell#	Designator	Ne	Ip [eV]	Ek [eV]	Auger [fs]	
+1	K-shell 	1	2.0	65350.0	87955.3	3.891E-01
+2	L1-shell 	3	2.0	11275.0	20630.9	7.808E-02
+3	L2-shell 	5	2.0	10742.0	20530.9	2.043E-01
+4	L3-shell 	6	4.0	9564.0	16036.6	2.006E-01
+5	M1-shell 	8	2.0	2604.0	6554.0	3.625E-02
+6	M2-shell 	10	2.0	2369.0	6415.2	6.017E-02
+7	M3-shell 	11	4.0	2113.0	5319.0	5.832E-02
+8	M4-shell 	13	4.0	1720.0	5129.6	2.644E-01
+9	M5-shell 	14	6.0	1665.0	4887.7	4.412E-01
+10	N1-shell 	16	2.0	542.0	2119.9	4.632E-02
+11	N2-shell 	18	2.0	444.0	1984.0	4.609E-02
+12	N3-shell 	19	4.0	386.0	1663.1	6.609E-02
+13	N4-shell 	21	4.0	229.0	1434.1	9.778E-02
+14	N5-shell 	22	6.0	217.0	1357.0	1.020E-01
+15	N6-shell 	24	6.0	21.0	707.3	1.204E-01
+16	N7-shell 	25	8.0	20.0	703.7	6.085E-01
+17	O1-shell 	27	2.0	68.0	407.1	1.568E+00
+18	O2-shell 	29	2.0	43.0	324.7	9.142E-12
+19	O3-shell 	30	4.0	35.0	258.9	9.142E-12
+20	Valence 	63	4.0	0.0	0.0	1.00000E+23
+-------------------------------------------------------------
+Element #2 is Nb contributing to the compound with 1.00
+Atomic number: 41, mass: 1.54275E-25 [kg]
+Number of valence electrons: 5.00 (band: 4.50/atom)
+Shell#	Designator	Ne	Ip [eV]	Ek [eV]	Auger [fs]	
+1	K-shell 	1	2.0	18990.0	24037.2	6.418E-01
+2	L1-shell 	3	2.0	2702.0	5016.6	1.123E-01
+3	L2-shell 	5	2.0	2469.0	4974.3	4.024E-01
+4	L3-shell 	6	4.0	2375.0	4624.9	4.297E-01
+5	M1-shell 	8	2.0	472.0	1351.4	8.252E-02
+6	M2-shell 	10	2.0	382.0	1271.2	2.361E-01
+7	M3-shell 	11	4.0	367.0	1199.6	2.242E-01
+8	M4-shell 	13	4.0	212.0	1045.3	7.182E+00
+9	M5-shell 	14	6.0	209.0	1027.7	6.906E+00
+10	N1-shell 	16	2.0	62.0	281.6	8.268E-02
+11	N2-shell 	18	2.0	40.0	236.5	6.369E-01
+12	N3-shell 	19	4.0	38.0	223.6	6.133E-01
+-------------------------------------------------------------
+Element #3 is Ta contributing to the compound with 1.00
+Atomic number: 73, mass: 3.00471E-25 [kg]
+Number of valence electrons: 5.00 (band: 4.50/atom)
+Shell#	Designator	Ne	Ip [eV]	Ek [eV]	Auger [fs]	
+1	K-shell 	1	2.0	67419.0	91112.7	3.810E-01
+2	L1-shell 	3	2.0	11684.0	21440.4	6.949E-02
+3	L2-shell 	5	2.0	11139.0	21336.0	2.023E-01
+4	L3-shell 	6	4.0	9884.0	16533.0	1.976E-01
+5	M1-shell 	8	2.0	2712.0	6821.3	3.761E-02
+6	M2-shell 	10	2.0	2472.0	6681.3	5.855E-02
+7	M3-shell 	11	4.0	2197.0	5503.5	6.477E-02
+8	M4-shell 	13	4.0	1796.0	5314.1	2.608E-01
+9	M5-shell 	14	6.0	1737.0	5055.7	4.177E-01
+10	N1-shell 	16	2.0	570.0	2210.4	4.583E-02
+11	N2-shell 	18	2.0	469.0	2071.1	4.860E-02
+12	N3-shell 	19	4.0	407.0	1728.2	6.570E-02
+13	N4-shell 	21	4.0	245.0	1494.4	9.398E-02
+14	N5-shell 	22	6.0	232.0	1411.9	9.864E-02
+15	N6-shell 	24	6.0	30.0	821.0	1.166E-01
+16	N7-shell 	25	8.0	28.0	792.5	4.110E-01
+17	O1-shell 	27	2.0	74.0	439.0	1.050E+00
+18	O2-shell 	29	2.0	47.0	350.2	9.017E-12
+19	O3-shell 	30	4.0	38.0	277.7	9.017E-12
+-------------------------------------------------------------
+Element #4 is Ti contributing to the compound with 1.00
+Atomic number: 22, mass: 7.94850E-26 [kg]
+Number of valence electrons: 4.00 (band: 4.50/atom)
+Shell#	Designator	Ne	Ip [eV]	Ek [eV]	Auger [fs]	
+1	K-shell 	1	2.0	4970.0	6507.5	9.781E-01
+2	L1-shell 	3	2.0	567.0	1165.2	1.250E-01
+3	L2-shell 	5	2.0	465.0	1113.1	2.629E+00
+4	L3-shell 	6	4.0	459.0	1089.4	2.604E+00
+5	M1-shell 	8	2.0	64.0	223.2	3.109E-01
+6	M2-shell 	10	2.0	39.0	180.0	3.432E+00
+7	M3-shell 	11	4.0	38.0	174.9	3.994E+00
+-------------------------------------------------------------
+Element #5 is Zr contributing to the compound with 1.00
+Atomic number: 40, mass: 1.51481E-25 [kg]
+Number of valence electrons: 4.00 (band: 4.50/atom)
+Shell#	Designator	Ne	Ip [eV]	Ek [eV]	Auger [fs]	
+1	K-shell 	1	2.0	18002.0	22788.6	6.527E-01
+2	L1-shell 	3	2.0	2536.0	4726.6	1.163E-01
+3	L2-shell 	5	2.0	2311.0	4683.9	4.271E-01
+4	L3-shell 	6	4.0	2227.0	4370.8	4.537E-01
+5	M1-shell 	8	2.0	434.0	1250.7	8.677E-02
+6	M2-shell 	10	2.0	348.0	1170.5	2.448E-01
+7	M3-shell 	11	4.0	335.0	1107.6	2.319E-01
+8	M4-shell 	13	4.0	187.0	948.0	9.385E+00
+9	M5-shell 	14	6.0	185.0	935.4	8.930E+00
+10	N1-shell 	16	2.0	56.0	244.3	1.459E-01
+11	N2-shell 	18	2.0	35.0	196.1	2.461E+00
+12	N3-shell 	19	4.0	33.0	183.6	2.626E+00
+*************************************************************
+Started  at 13:46:32 on 26/04/2026
+Finished at 13:49:05 on 26/04/2026
+Duration of execution of program: 2 mins 32.914 sec
+*************************************************************

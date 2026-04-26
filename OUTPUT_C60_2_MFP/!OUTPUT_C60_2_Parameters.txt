@@ -1,0 +1,113 @@
+*************************************************************
+*************************************************************
+*   __    __  _______     __       __    _   _______        *
+*   \ \  / / |__   __|   /  \     |  \  | | |__   __|       *
+*    \ \/ /     | |     / /\ \    |   \ | |    | |  ____    *
+*     )  (      | |    / /__\ \   | |\ \| |    | | |__  )   *
+*    / /\ \     | |   / ______ \  | | \   |    | |   / /    *
+*   /_/  \_\    |_|  /_/      \_\ |_|  \__|    |_|   \ \    *
+*                                                  ___) )   *
+*                                                 /____/    *
+*                                                           *
+*************************************************************
+*      (Version compiled with OpenMP parallelization)       *
+*************************************************************
+*************************************************************
+*  XTANT: X-ray-induced Thermal And Nonthermal Transitions  
+* Current version of the code: XTANT-3 (version 26.04.2026)
+*************************************************************
+  A hybrid approach consisting of: 
+ (1) Monte Carlo 
+ (2) Boltzmann collision integrals 
+ (3) Transferable Tight Binding 
+ (4) Molecular Dynamics 
+ DOI: https://doi.org/10.5281/zenodo.8392569
+*************************************************************
+  Calculations performed for the following parameters:
+ Target material: C60_2
+ Chemical formula interpreted as: 
+ 120.000000 of C (element #6)
+ Initial electron temperature	     273.000 [K]
+ Initial atomic temperature	     273.000 [K]
+ Number of FEL-pulses included  1
+ Photon energy       25.981 [eV]
+ Corresponding to the wavelength       47.720 [nm]
+ Monochromatic pulse is used
+ Gaussian pulse is used with
+ Pulse duration        1.000 [fs]
+ Pulse maximum at        0.000 [fs]
+ Absorbed dose         2.00000 [eV/atom]
+*************************************************************
+  No probe-pulse is calculated
+*************************************************************
+  The model parameters used are:
+ Duration of modelling -1.00000 [fs]
+ Tight Binding parametrization schemes used are:
+ Hamiltonian:      Pettifor
+ Repulsive part:   Pettifor
+ Zero-order TB: non-self-consistent-charge calculations
+ van der Waals energy: Girifalco
+ No Coulomb potential was defined or unbalanced charge allowed
+ No additional short-range repulsion was defined for close interatomic distances
+ Super-cell size in unit-cells: 1x1x1
+ Maxwellian distribution of initial velocities is used
+ Number of atoms in the supercell: 120
+ Boundary condition along X-axis: periodic
+ Boundary condition along Y-axis: periodic
+ Boundary condition along Z-axis: periodic
+ Electron cross sections used are from: CDF:EPICS
+ Density of the material:      0.496 [g/cm^3]
+ The used atomic density (used in MC cross sections):    2.487E+22 [1/cm^3]
+ EADL database used: EADL2025.ALL
+ EPDL database used: EPDL2025.ALL
+*************************************************************
+  The following numerical parameters are used:
+ Number of iterations in the MC module: 10000
+ Elastic high-energy-electron scattering is included in MC via Motts cross section
+ Number of threads in OPENMP: 30
+ MD algorithm used: Martyna-Tuckerman (4th order)
+ Time step in MD simulations is set from file: dt_grid.txt
+ Output data are saved every:     1.000 [fs]
+ Constant volume simulation (NVE)
+*************************************************************
+  The schemes for electron populations used are:
+ Scheme used for low-energy electrons relaxation: 
+ Relaxation-time approximation for electron thermalization
+ with the total characteristic time 100.000000 [fs]
+ Band-resolved relaxation is applied with characteristic times:
+ VB: Valence band relaxation time: 10.000000 [fs]
+ CB: Conduction band relaxation time: 10.000000 [fs]
+ Scheme used for electron-ion (electron-phonon) coupling: 
+ Landau full probability
+ switched on at:    -1000.0 [fs]
+ with the acceptance window:     5.0 [eV]
+ degeneracy tolerance:  0.00100 [eV]
+ and scaling factor of: 4.00000 (default)
+ using equivalent Maxwellian atomic distribution
+ No quenching of atoms for resolidification
+ No electronic thermostat is used
+ No atomic thermostat is used
+ Electron energy cut-off, separating high-energy- from low-energy-electrons: 8.0 [eV]
+ But it maybe dynamically adjusted to the top of CB (nonequilibrium simulation)
+ No electron emission is allowed in the calculation
+*************************************************************
+  Optional output:
+ Electron and photon mean free paths
+ Atomic coordinates in XYZ-format
+ Nearest neighbors numbers within the radius of 2.50 [A]
+ Output saved in the directory: OUTPUT_C60_2_MFP
+*************************************************************
+ Estimated plasmon energy: 11.71 [eV]
+ Atomic data used for C60_2 are:
+-------------------------------------------------------------
+Element #1 is C contributing to the compound with 120.00
+Atomic number: 6, mass: 1.99451E-26 [kg]
+Number of valence electrons: 4.00 (band: 4.00/atom)
+Shell#	Designator	Ne	Ip [eV]	Ek [eV]	Auger [fs]	
+1	K-shell 	1	2.0	288.0	442.4	1.073E+01
+2	Valence 	63	4.0	0.0	0.0	1.00000E+23
+*************************************************************
+Started  at 13:03:31 on 26/04/2026
+Finished at 13:04:26 on 26/04/2026
+Duration of execution of program: 54.621 sec
+*************************************************************

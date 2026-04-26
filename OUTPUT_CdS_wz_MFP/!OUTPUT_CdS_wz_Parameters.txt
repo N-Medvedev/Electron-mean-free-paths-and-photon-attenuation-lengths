@@ -1,0 +1,136 @@
+*************************************************************
+*************************************************************
+*   __    __  _______     __       __    _   _______        *
+*   \ \  / / |__   __|   /  \     |  \  | | |__   __|       *
+*    \ \/ /     | |     / /\ \    |   \ | |    | |  ____    *
+*     )  (      | |    / /__\ \   | |\ \| |    | | |__  )   *
+*    / /\ \     | |   / ______ \  | | \   |    | |   / /    *
+*   /_/  \_\    |_|  /_/      \_\ |_|  \__|    |_|   \ \    *
+*                                                  ___) )   *
+*                                                 /____/    *
+*                                                           *
+*************************************************************
+*      (Version compiled with OpenMP parallelization)       *
+*************************************************************
+*************************************************************
+*  XTANT: X-ray-induced Thermal And Nonthermal Transitions  
+* Current version of the code: XTANT-3 (version 26.04.2026)
+*************************************************************
+  A hybrid approach consisting of: 
+ (1) Monte Carlo 
+ (2) Boltzmann collision integrals 
+ (3) Transferable Tight Binding 
+ (4) Molecular Dynamics 
+ DOI: https://doi.org/10.5281/zenodo.8392569
+*************************************************************
+  Calculations performed for the following parameters:
+ Target material: CdS_wz
+ Chemical formula interpreted as: 
+ 2.000000 of Cd (element #48)
+ 2.000000 of S (element #16)
+ Initial electron temperature	     273.000 [K]
+ Initial atomic temperature	     273.000 [K]
+ Number of FEL-pulses included  1
+ Photon energy       27.782 [eV]
+ Corresponding to the wavelength       44.628 [nm]
+ Monochromatic pulse is used
+ Gaussian pulse is used with
+ Pulse duration        1.000 [fs]
+ Pulse maximum at        0.000 [fs]
+ Absorbed dose         2.00000 [eV/atom]
+*************************************************************
+  No probe-pulse is calculated
+*************************************************************
+  The model parameters used are:
+ Duration of modelling -1.00000 [fs]
+ Tight Binding parametrization schemes used are:
+ Hamiltonian:      DFTB
+ Repulsive part:   DFTB
+ With skf-parametrization: (CdSe-O-H-C-N)
+ With the basis set: sp3d5
+ Zero-order TB: non-self-consistent-charge calculations
+ No van der Waals potential was defined
+ No Coulomb potential was defined or unbalanced charge allowed
+ Short-range repulsion (exponential wall): General
+ Super-cell size in unit-cells: 1x1x1
+ Maxwellian distribution of initial velocities is used
+ Number of atoms in the supercell: 4
+ Boundary condition along X-axis: periodic
+ Boundary condition along Y-axis: periodic
+ Boundary condition along Z-axis: periodic
+ Electron cross sections used are from: CDF:EPICS
+ Density of the material:      4.702 [g/cm^3]
+ The used atomic density (used in MC cross sections):    3.920E+22 [1/cm^3]
+ EADL database used: EADL2025.ALL
+ EPDL database used: EPDL2025.ALL
+*************************************************************
+  The following numerical parameters are used:
+ Number of iterations in the MC module: 10000
+ Elastic high-energy-electron scattering is included in MC via Motts cross section
+ Number of threads in OPENMP: 30
+ MD algorithm used: Martyna-Tuckerman (4th order)
+ Time step in MD simulations is set from file: dt_grid.txt
+ Output data are saved every:     1.000 [fs]
+ Constant volume simulation (NVE)
+*************************************************************
+  The schemes for electron populations used are:
+ Scheme used for low-energy electrons relaxation: 
+ Relaxation-time approximation for electron thermalization
+ with the total characteristic time 100.000000 [fs]
+ Band-resolved relaxation is applied with characteristic times:
+ VB: Valence band relaxation time: 10.000000 [fs]
+ CB: Conduction band relaxation time: 10.000000 [fs]
+ Scheme used for electron-ion (electron-phonon) coupling: 
+ Landau full probability
+ switched on at:    -1000.0 [fs]
+ with the acceptance window:     5.0 [eV]
+ degeneracy tolerance:  0.00100 [eV]
+ and scaling factor of: 4.00000 (default)
+ using equivalent Maxwellian atomic distribution
+ No quenching of atoms for resolidification
+ No electronic thermostat is used
+ No atomic thermostat is used
+ Electron energy cut-off, separating high-energy- from low-energy-electrons: 8.0 [eV]
+ But it maybe dynamically adjusted to the top of CB (nonequilibrium simulation)
+ No electron emission is allowed in the calculation
+*************************************************************
+  Optional output:
+ Electron and photon mean free paths
+ Atomic coordinates in XYZ-format
+ Nearest neighbors numbers within the radius of 2.50 [A]
+ Output saved in the directory: OUTPUT_CdS_wz_MFP
+*************************************************************
+ Estimated plasmon energy: 22.06 [eV]
+ Atomic data used for CdS_wz are:
+-------------------------------------------------------------
+Element #1 is Cd contributing to the compound with 2.00
+Atomic number: 48, mass: 1.86663E-25 [kg]
+Number of valence electrons: 12.00 (band: 9.00/atom)
+Shell#	Designator	Ne	Ip [eV]	Ek [eV]	Auger [fs]	
+1	K-shell 	1	2.0	26715.0	33912.3	5.704E-01
+2	L1-shell 	3	2.0	4022.0	7297.5	1.569E-01
+3	L2-shell 	5	2.0	3732.0	7255.8	2.912E-01
+4	L3-shell 	6	4.0	3542.0	6555.3	3.169E-01
+5	M1-shell 	8	2.0	775.0	2093.6	5.619E-02
+6	M2-shell 	10	2.0	655.0	1999.1	1.718E-01
+7	M3-shell 	11	4.0	621.0	1847.2	1.616E-01
+8	M4-shell 	13	4.0	415.0	1682.2	1.916E+00
+9	M5-shell 	14	6.0	408.0	1645.7	1.890E+00
+10	N1-shell 	16	2.0	112.0	519.9	2.597E-02
+11	N2-shell 	18	2.0	78.0	461.2	3.996E-02
+12	N3-shell 	19	4.0	71.0	418.5	3.712E-02
+13	Valence 	63	12.0	0.0	0.0	1.00000E+23
+-------------------------------------------------------------
+Element #2 is S contributing to the compound with 2.00
+Atomic number: 16, mass: 5.32402E-26 [kg]
+Number of valence electrons: 6.00 (band: 9.00/atom)
+Shell#	Designator	Ne	Ip [eV]	Ek [eV]	Auger [fs]	
+1	K-shell 	1	2.0	2476.0	3383.5	1.365E+00
+2	L1-shell 	3	2.0	232.0	538.4	2.749E-01
+3	L2-shell 	5	2.0	170.0	497.8	9.995E+00
+4	L3-shell 	6	4.0	168.0	490.0	9.949E+00
+*************************************************************
+Started  at 15:29:05 on 26/04/2026
+Finished at 15:30:03 on 26/04/2026
+Duration of execution of program: 57.282 sec
+*************************************************************

@@ -1,0 +1,124 @@
+*************************************************************
+*************************************************************
+*   __    __  _______     __       __    _   _______        *
+*   \ \  / / |__   __|   /  \     |  \  | | |__   __|       *
+*    \ \/ /     | |     / /\ \    |   \ | |    | |  ____    *
+*     )  (      | |    / /__\ \   | |\ \| |    | | |__  )   *
+*    / /\ \     | |   / ______ \  | | \   |    | |   / /    *
+*   /_/  \_\    |_|  /_/      \_\ |_|  \__|    |_|   \ \    *
+*                                                  ___) )   *
+*                                                 /____/    *
+*                                                           *
+*************************************************************
+*      (Version compiled with OpenMP parallelization)       *
+*************************************************************
+*************************************************************
+*  XTANT: X-ray-induced Thermal And Nonthermal Transitions  
+* Current version of the code: XTANT-3 (version 26.04.2026)
+*************************************************************
+  A hybrid approach consisting of: 
+ (1) Monte Carlo 
+ (2) Boltzmann collision integrals 
+ (3) Transferable Tight Binding 
+ (4) Molecular Dynamics 
+ DOI: https://doi.org/10.5281/zenodo.8392569
+*************************************************************
+  Calculations performed for the following parameters:
+ Target material: Zr
+ Chemical formula interpreted as: 
+ 4.000000 of Zr (element #40)
+ Initial electron temperature	     273.000 [K]
+ Initial atomic temperature	     273.000 [K]
+ Number of FEL-pulses included  1
+ Photon energy       25.742 [eV]
+ Corresponding to the wavelength       48.164 [nm]
+ Monochromatic pulse is used
+ Gaussian pulse is used with
+ Pulse duration        1.000 [fs]
+ Pulse maximum at        0.000 [fs]
+ Absorbed dose         2.00000 [eV/atom]
+*************************************************************
+  No probe-pulse is calculated
+*************************************************************
+  The model parameters used are:
+ Duration of modelling -1.00000 [fs]
+ Tight Binding parametrization schemes used are:
+ Hamiltonian:      Mehl
+ Repulsive part:   Mehl
+ Zero-order TB: non-self-consistent-charge calculations
+ No van der Waals potential was defined
+ No Coulomb potential was defined or unbalanced charge allowed
+ No additional short-range repulsion was defined for close interatomic distances
+ Super-cell size in unit-cells: 1x1x1
+ Maxwellian distribution of initial velocities is used
+ Number of atoms in the supercell: 4
+ Boundary condition along X-axis: periodic
+ Boundary condition along Y-axis: periodic
+ Boundary condition along Z-axis: periodic
+ Electron cross sections used are from: CDF:EPICS
+ Density of the material:      7.062 [g/cm^3]
+ The used atomic density (used in MC cross sections):    4.662E+22 [1/cm^3]
+ EADL database used: EADL2025.ALL
+ EPDL database used: EPDL2025.ALL
+*************************************************************
+  The following numerical parameters are used:
+ Number of iterations in the MC module: 10000
+ Elastic high-energy-electron scattering is included in MC via Motts cross section
+ Number of threads in OPENMP: 30
+ MD algorithm used: Martyna-Tuckerman (4th order)
+ Time step in MD simulations is set from file: dt_grid.txt
+ Output data are saved every:     1.000 [fs]
+ Constant volume simulation (NVE)
+*************************************************************
+  The schemes for electron populations used are:
+ Scheme used for low-energy electrons relaxation: 
+ Relaxation-time approximation for electron thermalization
+ with the total characteristic time 100.000000 [fs]
+ Band-resolved relaxation is applied with characteristic times:
+ VB: Valence band relaxation time: 10.000000 [fs]
+ CB: Conduction band relaxation time: 10.000000 [fs]
+ Scheme used for electron-ion (electron-phonon) coupling: 
+ Landau full probability
+ switched on at:    -1000.0 [fs]
+ with the acceptance window:     5.0 [eV]
+ degeneracy tolerance:  0.00100 [eV]
+ and scaling factor of: 4.00000 (default)
+ using equivalent Maxwellian atomic distribution
+ No quenching of atoms for resolidification
+ No electronic thermostat is used
+ No atomic thermostat is used
+ Electron energy cut-off, separating high-energy- from low-energy-electrons: 8.0 [eV]
+ But it maybe dynamically adjusted to the top of CB (nonequilibrium simulation)
+ No electron emission is allowed in the calculation
+*************************************************************
+  Optional output:
+ Electron and photon mean free paths
+ Atomic coordinates in XYZ-format
+ Nearest neighbors numbers within the radius of 2.50 [A]
+ Output saved in the directory: OUTPUT_Zr_MFP
+*************************************************************
+ Estimated plasmon energy: 16.04 [eV]
+ Atomic data used for Zr are:
+-------------------------------------------------------------
+Element #1 is Zr contributing to the compound with 4.00
+Atomic number: 40, mass: 1.51481E-25 [kg]
+Number of valence electrons: 4.00 (band: 4.00/atom)
+Shell#	Designator	Ne	Ip [eV]	Ek [eV]	Auger [fs]	
+1	K-shell 	1	2.0	18002.0	22788.6	6.527E-01
+2	L1-shell 	3	2.0	2536.0	4726.6	1.163E-01
+3	L2-shell 	5	2.0	2311.0	4683.9	4.271E-01
+4	L3-shell 	6	4.0	2227.0	4370.8	4.537E-01
+5	M1-shell 	8	2.0	434.0	1250.7	8.677E-02
+6	M2-shell 	10	2.0	348.0	1170.5	2.448E-01
+7	M3-shell 	11	4.0	335.0	1107.6	2.319E-01
+8	M4-shell 	13	4.0	187.0	948.0	9.385E+00
+9	M5-shell 	14	6.0	185.0	935.4	8.930E+00
+10	N1-shell 	16	2.0	56.0	244.3	1.459E-01
+11	N2-shell 	18	2.0	35.0	196.1	2.461E+00
+12	N3-shell 	19	4.0	33.0	183.6	2.626E+00
+13	Valence 	63	4.0	0.0	0.0	1.00000E+23
+*************************************************************
+Started  at 17:39:28 on 26/04/2026
+Finished at 17:40:09 on 26/04/2026
+Duration of execution of program: 40.618 sec
+*************************************************************

@@ -1,0 +1,167 @@
+*************************************************************
+*************************************************************
+*   __    __  _______     __       __    _   _______        *
+*   \ \  / / |__   __|   /  \     |  \  | | |__   __|       *
+*    \ \/ /     | |     / /\ \    |   \ | |    | |  ____    *
+*     )  (      | |    / /__\ \   | |\ \| |    | | |__  )   *
+*    / /\ \     | |   / ______ \  | | \   |    | |   / /    *
+*   /_/  \_\    |_|  /_/      \_\ |_|  \__|    |_|   \ \    *
+*                                                  ___) )   *
+*                                                 /____/    *
+*                                                           *
+*************************************************************
+*      (Version compiled with OpenMP parallelization)       *
+*************************************************************
+*************************************************************
+*  XTANT: X-ray-induced Thermal And Nonthermal Transitions  
+* Current version of the code: XTANT-3 (version 26.04.2026)
+*************************************************************
+  A hybrid approach consisting of: 
+ (1) Monte Carlo 
+ (2) Boltzmann collision integrals 
+ (3) Transferable Tight Binding 
+ (4) Molecular Dynamics 
+ DOI: https://doi.org/10.5281/zenodo.8392569
+*************************************************************
+  Calculations performed for the following parameters:
+ Target material: PbWO4
+ Chemical formula interpreted as: 
+ 4.000000 of Pb (element #82)
+ 4.000000 of W (element #74)
+ 16.000000 of O (element #8)
+ Initial electron temperature	     273.000 [K]
+ Initial atomic temperature	     273.000 [K]
+ Number of FEL-pulses included  1
+ Photon energy       26.845 [eV]
+ Corresponding to the wavelength       46.185 [nm]
+ Monochromatic pulse is used
+ Gaussian pulse is used with
+ Pulse duration        1.000 [fs]
+ Pulse maximum at        0.000 [fs]
+ Absorbed dose         2.00000 [eV/atom]
+*************************************************************
+  No probe-pulse is calculated
+*************************************************************
+  The model parameters used are:
+ Duration of modelling -1.00000 [fs]
+ Tight Binding parametrization schemes used are:
+ Hamiltonian:      DFTB
+ Repulsive part:   DFTB
+ With skf-parametrization: (PTBP)
+ With the basis set: sp3d5
+ Zero-order TB: non-self-consistent-charge calculations
+ No van der Waals potential was defined
+ No Coulomb potential was defined or unbalanced charge allowed
+ No additional short-range repulsion was defined for close interatomic distances
+ Super-cell size in unit-cells: 1x1x1
+ Maxwellian distribution of initial velocities is used
+ Number of atoms in the supercell: 24
+ Boundary condition along X-axis: periodic
+ Boundary condition along Y-axis: periodic
+ Boundary condition along Z-axis: periodic
+ Electron cross sections used are from: CDF:EPICS
+ Density of the material:      7.343 [g/cm^3]
+ The used atomic density (used in MC cross sections):    5.831E+22 [1/cm^3]
+ EADL database used: EADL2025.ALL
+ EPDL database used: EPDL2025.ALL
+*************************************************************
+  The following numerical parameters are used:
+ Number of iterations in the MC module: 10000
+ Elastic high-energy-electron scattering is included in MC via Motts cross section
+ Number of threads in OPENMP: 30
+ MD algorithm used: Martyna-Tuckerman (4th order)
+ Time step in MD simulations is set from file: dt_grid.txt
+ Output data are saved every:     1.000 [fs]
+ Constant volume simulation (NVE)
+*************************************************************
+  The schemes for electron populations used are:
+ Scheme used for low-energy electrons relaxation: 
+ Relaxation-time approximation for electron thermalization
+ with the total characteristic time 100.000000 [fs]
+ Band-resolved relaxation is applied with characteristic times:
+ VB: Valence band relaxation time: 10.000000 [fs]
+ CB: Conduction band relaxation time: 10.000000 [fs]
+ Scheme used for electron-ion (electron-phonon) coupling: 
+ Landau full probability
+ switched on at:    -1000.0 [fs]
+ with the acceptance window:     5.0 [eV]
+ degeneracy tolerance:  0.00100 [eV]
+ and scaling factor of: 4.00000 (default)
+ using equivalent Maxwellian atomic distribution
+ No quenching of atoms for resolidification
+ No electronic thermostat is used
+ No atomic thermostat is used
+ Electron energy cut-off, separating high-energy- from low-energy-electrons: 8.0 [eV]
+ But it maybe dynamically adjusted to the top of CB (nonequilibrium simulation)
+ No electron emission is allowed in the calculation
+*************************************************************
+  Optional output:
+ Electron and photon mean free paths
+ Atomic coordinates in XYZ-format
+ Nearest neighbors numbers within the radius of 2.50 [A]
+ Output saved in the directory: OUTPUT_PbWO4_MFP
+*************************************************************
+ Estimated plasmon energy: 21.34 [eV]
+ Atomic data used for PbWO4 are:
+-------------------------------------------------------------
+Element #1 is Pb contributing to the compound with 4.00
+Atomic number: 82, mass: 3.44064E-25 [kg]
+Number of valence electrons: 4.00 (band: 5.67/atom)
+Shell#	Designator	Ne	Ip [eV]	Ek [eV]	Auger [fs]	
+1	K-shell 	1	2.0	88011.0	124226.2	3.097E-01
+2	L1-shell 	3	2.0	15867.0	30114.0	5.264E-02
+3	L2-shell 	5	2.0	15206.0	29972.3	1.868E-01
+4	L3-shell 	6	4.0	13041.0	21397.6	1.722E-01
+5	M1-shell 	8	2.0	3857.0	9689.5	3.437E-02
+6	M2-shell 	10	2.0	3560.0	9516.4	4.962E-02
+7	M3-shell 	11	4.0	3072.0	7374.3	6.256E-02
+8	M4-shell 	13	4.0	2592.0	7176.1	2.707E-01
+9	M5-shell 	14	6.0	2490.0	6738.7	2.737E-01
+10	N1-shell 	16	2.0	899.0	3269.8	4.300E-02
+11	N2-shell 	18	2.0	769.0	3108.0	4.716E-02
+12	N3-shell 	19	4.0	651.0	2467.2	7.204E-02
+13	N4-shell 	21	4.0	441.0	2208.8	8.438E-02
+14	N5-shell 	22	6.0	419.0	2080.9	9.216E-02
+15	N6-shell 	24	6.0	148.0	1621.2	2.571E+00
+16	N7-shell 	25	8.0	144.0	1590.3	2.837E+00
+17	O1-shell 	27	2.0	153.0	847.3	2.513E-02
+18	O2-shell 	29	2.0	111.0	740.3	8.224E-02
+19	O3-shell 	30	4.0	90.0	586.9	4.924E-02
+20	O4-shell 	32	4.0	27.0	346.0	8.027E-12
+21	O5-shell 	33	6.0	25.0	326.9	8.027E-12
+22	Valence 	63	4.0	0.0	0.0	1.00000E+23
+-------------------------------------------------------------
+Element #2 is W contributing to the compound with 4.00
+Atomic number: 74, mass: 3.05274E-25 [kg]
+Number of valence electrons: 6.00 (band: 5.67/atom)
+Shell#	Designator	Ne	Ip [eV]	Ek [eV]	Auger [fs]	
+1	K-shell 	1	2.0	69529.0	94363.9	3.729E-01
+2	L1-shell 	3	2.0	12103.0	22275.9	6.085E-02
+3	L2-shell 	5	2.0	11546.0	22169.2	2.001E-01
+4	L3-shell 	6	4.0	10209.0	17036.0	1.946E-01
+5	M1-shell 	8	2.0	2823.0	7096.9	3.792E-02
+6	M2-shell 	10	2.0	2577.0	6953.2	5.717E-02
+7	M3-shell 	11	4.0	2283.0	5691.9	6.525E-02
+8	M4-shell 	13	4.0	1874.0	5502.2	2.664E-01
+9	M5-shell 	14	6.0	1811.0	5227.6	3.955E-01
+10	N1-shell 	16	2.0	599.0	2304.5	4.542E-02
+11	N2-shell 	18	2.0	495.0	2161.9	4.839E-02
+12	N3-shell 	19	4.0	428.0	1792.9	6.576E-02
+13	N4-shell 	21	4.0	261.0	1553.4	9.077E-02
+14	N5-shell 	22	6.0	248.0	1471.7	9.594E-02
+15	N6-shell 	24	6.0	38.0	883.9	1.131E-01
+16	N7-shell 	25	8.0	36.0	860.5	3.103E-01
+17	O1-shell 	27	2.0	80.0	472.1	7.895E-01
+18	O2-shell 	29	2.0	51.0	376.7	8.895E-12
+19	O3-shell 	30	4.0	41.0	297.5	8.895E-12
+-------------------------------------------------------------
+Element #3 is O contributing to the compound with 16.00
+Atomic number: 8, mass: 2.65673E-26 [kg]
+Number of valence electrons: 6.00 (band: 5.67/atom)
+Shell#	Designator	Ne	Ip [eV]	Ek [eV]	Auger [fs]	
+1	K-shell 	1	2.0	538.0	810.1	4.965E+00
+*************************************************************
+Started  at 16:25:01 on 26/04/2026
+Finished at 16:26:41 on 26/04/2026
+Duration of execution of program: 1 min 40.726 sec
+*************************************************************

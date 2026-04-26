@@ -1,0 +1,135 @@
+*************************************************************
+*************************************************************
+*   __    __  _______     __       __    _   _______        *
+*   \ \  / / |__   __|   /  \     |  \  | | |__   __|       *
+*    \ \/ /     | |     / /\ \    |   \ | |    | |  ____    *
+*     )  (      | |    / /__\ \   | |\ \| |    | | |__  )   *
+*    / /\ \     | |   / ______ \  | | \   |    | |   / /    *
+*   /_/  \_\    |_|  /_/      \_\ |_|  \__|    |_|   \ \    *
+*                                                  ___) )   *
+*                                                 /____/    *
+*                                                           *
+*************************************************************
+*      (Version compiled with OpenMP parallelization)       *
+*************************************************************
+*************************************************************
+*  XTANT: X-ray-induced Thermal And Nonthermal Transitions  
+* Current version of the code: XTANT-3 (version 26.04.2026)
+*************************************************************
+  A hybrid approach consisting of: 
+ (1) Monte Carlo 
+ (2) Boltzmann collision integrals 
+ (3) Transferable Tight Binding 
+ (4) Molecular Dynamics 
+ DOI: https://doi.org/10.5281/zenodo.8392569
+*************************************************************
+  Calculations performed for the following parameters:
+ Target material: Bi
+ Chemical formula interpreted as: 
+ 10.000000 of Bi (element #83)
+ Initial electron temperature	     273.000 [K]
+ Initial atomic temperature	     273.000 [K]
+ Number of FEL-pulses included  1
+ Photon energy       26.233 [eV]
+ Corresponding to the wavelength       47.263 [nm]
+ Monochromatic pulse is used
+ Gaussian pulse is used with
+ Pulse duration        1.000 [fs]
+ Pulse maximum at        0.000 [fs]
+ Absorbed dose         2.00000 [eV/atom]
+*************************************************************
+  No probe-pulse is calculated
+*************************************************************
+  The model parameters used are:
+ Duration of modelling -1.00000 [fs]
+ Tight Binding parametrization schemes used are:
+ Hamiltonian:      DFTB
+ Repulsive part:   DFTB
+ With skf-parametrization: (PTBP)
+ With the basis set: sp3
+ Zero-order TB: non-self-consistent-charge calculations
+ No van der Waals potential was defined
+ No Coulomb potential was defined or unbalanced charge allowed
+ No additional short-range repulsion was defined for close interatomic distances
+ Super-cell size in unit-cells: 1x1x1
+ Maxwellian distribution of initial velocities is used
+ Number of atoms in the supercell: 10
+ Boundary condition along X-axis: periodic
+ Boundary condition along Y-axis: periodic
+ Boundary condition along Z-axis: periodic
+ Electron cross sections used are from: CDF:EPICS
+ Density of the material:      7.544 [g/cm^3]
+ The used atomic density (used in MC cross sections):    2.174E+22 [1/cm^3]
+ EADL database used: EADL2025.ALL
+ EPDL database used: EPDL2025.ALL
+*************************************************************
+  The following numerical parameters are used:
+ Number of iterations in the MC module: 10000
+ Elastic high-energy-electron scattering is included in MC via Motts cross section
+ Number of threads in OPENMP: 30
+ MD algorithm used: Martyna-Tuckerman (4th order)
+ Time step in MD simulations is set from file: dt_grid.txt
+ Output data are saved every:     1.000 [fs]
+ Constant volume simulation (NVE)
+*************************************************************
+  The schemes for electron populations used are:
+ Scheme used for low-energy electrons relaxation: 
+ Relaxation-time approximation for electron thermalization
+ with the total characteristic time 100.000000 [fs]
+ Band-resolved relaxation is applied with characteristic times:
+ VB: Valence band relaxation time: 10.000000 [fs]
+ CB: Conduction band relaxation time: 10.000000 [fs]
+ Scheme used for electron-ion (electron-phonon) coupling: 
+ Landau full probability
+ switched on at:    -1000.0 [fs]
+ with the acceptance window:     5.0 [eV]
+ degeneracy tolerance:  0.00100 [eV]
+ and scaling factor of: 4.00000 (default)
+ using equivalent Maxwellian atomic distribution
+ No quenching of atoms for resolidification
+ No electronic thermostat is used
+ No atomic thermostat is used
+ Electron energy cut-off, separating high-energy- from low-energy-electrons: 8.0 [eV]
+ But it maybe dynamically adjusted to the top of CB (nonequilibrium simulation)
+ No electron emission is allowed in the calculation
+*************************************************************
+  Optional output:
+ Electron and photon mean free paths
+ Atomic coordinates in XYZ-format
+ Nearest neighbors numbers within the radius of 2.50 [A]
+ Output saved in the directory: OUTPUT_Bi_MFP
+*************************************************************
+ Estimated plasmon energy: 12.24 [eV]
+ Atomic data used for Bi are:
+-------------------------------------------------------------
+Element #1 is Bi contributing to the compound with 10.00
+Atomic number: 83, mass: 3.47020E-25 [kg]
+Number of valence electrons: 5.00 (band: 5.00/atom)
+Shell#	Designator	Ne	Ip [eV]	Ek [eV]	Auger [fs]	
+1	K-shell 	1	2.0	90534.0	128507.0	3.020E-01
+2	L1-shell 	3	2.0	16396.0	31257.1	5.223E-02
+3	L2-shell 	5	2.0	15719.0	31108.0	1.853E-01
+4	L3-shell 	6	4.0	13426.0	21983.6	1.697E-01
+5	M1-shell 	8	2.0	4007.0	10063.4	3.413E-02
+6	M2-shell 	10	2.0	3704.0	9888.6	4.897E-02
+7	M3-shell 	11	4.0	3185.0	7602.7	6.121E-02
+8	M4-shell 	13	4.0	2696.0	7403.7	2.607E-01
+9	M5-shell 	14	6.0	2588.0	6941.6	2.634E-01
+10	N1-shell 	16	2.0	946.0	3408.2	4.267E-02
+11	N2-shell 	18	2.0	813.0	3245.4	4.653E-02
+12	N3-shell 	19	4.0	687.0	2561.3	7.248E-02
+13	N4-shell 	21	4.0	472.0	2303.5	8.556E-02
+14	N5-shell 	22	6.0	448.0	2165.5	9.392E-02
+15	N6-shell 	24	6.0	170.0	1720.7	3.008E+00
+16	N7-shell 	25	8.0	165.0	1680.9	3.286E+00
+17	O1-shell 	27	2.0	167.0	901.9	2.338E-02
+18	O2-shell 	29	2.0	125.0	805.2	8.053E-02
+19	O3-shell 	30	4.0	101.0	633.4	4.368E-02
+20	O4-shell 	32	4.0	34.0	394.1	7.930E-12
+21	O5-shell 	33	6.0	32.0	376.8	7.930E-12
+22	Valence 	63	5.0	0.0	0.0	1.00000E+23
+*************************************************************
+Started  at 12:56:42 on 26/04/2026
+Finished at 12:57:45 on 26/04/2026
+Duration of execution of program: 1 min 3.222 sec
+*************************************************************
