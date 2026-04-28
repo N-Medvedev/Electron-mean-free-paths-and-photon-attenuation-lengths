@@ -26,13 +26,13 @@
   Calculations performed for the following parameters:
  Target material: H2O
  Chemical formula interpreted as: 
- 128.000000 of O (element #8)
- 64.000000 of H (element #1)
+ 128.000000 of H (element #1)
+ 64.000000 of O (element #8)
  Initial electron temperature	     273.000 [K]
  Initial atomic temperature	     273.000 [K]
  Number of FEL-pulses included  1
- Photon energy       26.660 [eV]
- Corresponding to the wavelength       46.505 [nm]
+ Photon energy       26.274 [eV]
+ Corresponding to the wavelength       47.189 [nm]
  Monochromatic pulse is used
  Gaussian pulse is used with
  Pulse duration        1.000 [fs]
@@ -59,7 +59,7 @@
  Boundary condition along Y-axis: periodic
  Boundary condition along Z-axis: periodic
  Electron cross sections used are from: CDF:EPICS
- Density of the material:      1.833 [g/cm^3]
+ Density of the material:      1.000 [g/cm^3]
  The used atomic density (used in MC cross sections):    1.003E+23 [1/cm^3]
  EADL database used: EADL2025.ALL
  EPDL database used: EPDL2025.ALL
@@ -100,22 +100,22 @@
  Nearest neighbors numbers within the radius of 2.50 [A]
  Output saved in the directory: OUTPUT_H2O_MFP_v1
 *************************************************************
- Estimated plasmon energy: 24.48 [eV]
+ Estimated plasmon energy: 19.21 [eV]
  Atomic data used for H2O are:
 -------------------------------------------------------------
-Element #1 is O contributing to the compound with 128.00
+Element #1 is H contributing to the compound with 128.00
+Atomic number: 1, mass: 1.67416E-27 [kg]
+Number of valence electrons: 1.00 (band: 2.67/atom)
+Shell#	Designator	Ne	Ip [eV]	Ek [eV]	Auger [fs]	
+1	Valence 	63	1.0	0.0	0.0	1.00000E+23
+-------------------------------------------------------------
+Element #2 is O contributing to the compound with 64.00
 Atomic number: 8, mass: 2.65673E-26 [kg]
-Number of valence electrons: 6.00 (band: 4.33/atom)
+Number of valence electrons: 6.00 (band: 2.67/atom)
 Shell#	Designator	Ne	Ip [eV]	Ek [eV]	Auger [fs]	
 1	K-shell 	1	2.0	538.0	810.1	4.965E+00
-2	Valence 	63	6.0	0.0	0.0	1.00000E+23
--------------------------------------------------------------
-Element #2 is H contributing to the compound with 64.00
-Atomic number: 1, mass: 1.67416E-27 [kg]
-Number of valence electrons: 1.00 (band: 4.33/atom)
-Shell#	Designator	Ne	Ip [eV]	Ek [eV]	Auger [fs]	
 *************************************************************
-Started  at 17:40:33 on 26/04/2026
-Finished at 17:41:17 on 26/04/2026
-Duration of execution of program: 43.909 sec
+Started  at 08:23:41 on 28/04/2026
+Finished at 08:24:03 on 28/04/2026
+Duration of execution of program: 22.053 sec
 *************************************************************

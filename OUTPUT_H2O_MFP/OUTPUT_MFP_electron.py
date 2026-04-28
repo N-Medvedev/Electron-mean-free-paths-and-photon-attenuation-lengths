@@ -14,13 +14,13 @@ df = pd.read_csv(r"OUTPUT_H2O_Electron_IMFP.dat", sep=r'\s+', header=None, comme
 plt.xscale("log")
 plt.yscale("log")
 # Prepare the plot:
-columns_to_plot = [ 1, 2, 3]
-labels = [ "O K-shell", "Valence", "Total inelastic"]
+columns_to_plot = [1, 2, 3]
+labels = ["O K-shell", "Valence", "Total inelastic"]
 # Create N distinct colors from a colormap
 N = len(columns_to_plot)
 colors = plt.cm.tab10(np.linspace(1, 0, 10))
 # Set line styles:
-linestyles = [ "-", "-", "-"]
+linestyles = ["-", "-", "-"]
 for i, col in enumerate(columns_to_plot):
     color = colors[i % len(colors)]
     ls    = linestyles[i % len(linestyles)]
@@ -31,8 +31,8 @@ for i, col in enumerate(columns_to_plot):
     linestyle=ls)
 # Add a curve from the second file
 df2 = pd.read_csv(r"OUTPUT_H2O_Electron_EMFP.dat", sep=r'\s+', header=None, comment="#", skipinitialspace=True)
-columns_to_plot2 = [ 3]
-labels2 = [ "Elastic"]
+columns_to_plot2 = [3]
+labels2 = ["Elastic"]
 # Create second part of the plot:
 for col, label in zip(columns_to_plot2, labels2):
     plt.plot(df2.iloc[:, 0], df2.iloc[:, col], label=label, linestyle="--")
