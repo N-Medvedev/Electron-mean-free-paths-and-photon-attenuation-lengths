@@ -2,6 +2,9 @@
 
 __Electron mean free paths and photon attenuation lengths in various materials calculated with `XTANT-3` code__
 
+[![DOI](https://zenodo.org/badge/1221780769.svg)](https://doi.org/10.5281/zenodo.19811711)
+
+
 XTANT-3 code: [https://github.com/N-Medvedev/XTANT-3](https://github.com/N-Medvedev/XTANT-3).
 
 
