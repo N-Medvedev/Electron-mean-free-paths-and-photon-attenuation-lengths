@@ -41,7 +41,7 @@ The photoabsorption cross sections for each shell of each element are extracted 
 
 ## Caution
 
-The data are only reliable at electron and photon energies above some 50 eV. Although the files and plots contain the data for lower energies, one must keep in mind that for electrons, the single-pole approximation (as well as the linear response theory itself) is not meant for slow particles, and the data may only be used with extreme caution - in an absence of better data. For example, not that for band-gap materials (insulators, semiconductors), the data are shown even for energies smaller than the band gap - which should be excluded in simulations.
+The data are only reliable at electron and photon energies above some 50 eV. Although the files and plots contain the data for lower energies, one must keep in mind that for electrons, the single-pole approximation (as well as the linear response theory itself) is not meant for slow particles, and the data may only be used with extreme caution - in an absence of better data. For example, note that for band-gap materials (insulators, semiconductors), the electron inelastic mean free paths are shown even for energies smaller than the band gap - which should be excluded in simulations.
 For photons, the data are atomic, so at energies below some 30-50 eV, the collective effects of the solids are missing (in particular, plasmon peak in the photoabsorption cross sections), and thus the data become completely unreliable at low energies.
 
 
